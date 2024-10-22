@@ -26,10 +26,12 @@
     </nav>
 
     
-
+    {% if current_user == super_user %} <!-- {% if current_user == super_user or current_user == super_user2 %} CAN ADD ADMIN -->
     <div class="marksbtndiv">
         <a href="/result"><button class="marksbtn">Enter Marks</button></a>
     </div>
+
+    {% endif %}
 
     <div class="dash-content"> 
     <table class="table" border="1">
