@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <title>Profile</title>
+</head>
+<body>
+    
+<nav class="profile-navbar"> 
+    <div class="profile-logo">
+        <a href="/dashboard"> <img src="../static/img/siriuslogo.png" ></a>
+    </div>
+
+    <div class="profile-logout">
+        <!-- <p class="profile"><a href="/profile">Profile</a></p> -->
+        <a href="/logout"><button class="button">Logout</button></a>
+
+    </div>
+
+
+</nav>
+   
+
+<div class="profile-main">
+<!--   
+<div class="profile">
+     
+    <div class="h3"><h3>Your Profile</h3></div>
+
+    <strong>First Name: </strong>{{ user.first_name}} <br>
+    <strong>Last Name: </strong>{{ user.last_name}} <br>
+    <strong>Userame: </strong>{{ user.username}} <br>
+    <strong>Email: </strong>{{ user.email}} <br>
+-->
+    
+<div class="profile-h3">
+
+    <h3>Your Profile</h3>
+
+</div>
+
+<div class="profile-ul">
+    <ul>
+        <li> <strong>First Name: </strong>{{ user.first_name}} </li> <br>
+        <li>  <strong>Last Name: </strong>{{ user.last_name}} </li> <br>
+        <li> <strong>Userame: </strong>{{ user.username}} </li> <br>
+        <li> <strong>Email: </strong>{{ user.email}} </li> <br>
+    </ul>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

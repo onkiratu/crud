@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <title>Profile</title>
+</head>
+
+<body>
+
+    <nav class="navbar-dashboard">
+
+        <div>
+            <img src="../static/img/siriuslogo.png">
+        </div>
+
+
+        <div class="nav-dash-items">
+            <p class="profile"><a href="/profile">Profile</a></p>
+            <a href="/logout"><button class="button">Logout</button></a>
+
+        </div>
+
+    </nav>
+
+    
+
+    <div class="marksbtndiv">
+        <a href="/result"><button class="marksbtn">Enter Marks</button></a>
+    </div>
+
+    <div class="dash-content"> 
+    <table class="table" border="1">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Math</th>
+                <th>English</th>
+                <th>Applied Computing</th>
+                <th>Algorithmics</th>
+                <th>Total Marks</th>
+                <th>Grade</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            {% if current_user == super_user %}
+            {% for user in users %}
+
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+
+                {% for result in user.results %}
+                <td>{{ result.math }}</td>
+                <td>{{ result.english }}</td>
+                <td>{{ result.applied_computing }}</td>
+                <td>{{ result.algorithmics }}</td>
+                <td>{{ result.total_marks }}</td>
+                <td>{{ result.grade }}</td>
+
+                {% endfor %}
+
+            </tr> 
+            {% endfor %}
+           
+            {% else %}
+
+            <tr>
+                <td>{{ current_user.id }}</td>
+                <td>{{ current_user.first_name }}</td>
+                <td>{{ current_user.last_name }}</td>
+
+                {% for result in current_user.results %}
+                <td>{{ result.math }}</td>
+                <td>{{ result.english }}</td>
+                <td>{{ result.applied_computing }}</td>
+                <td>{{ result.algorithmics }}</td>
+                <td>{{ result.total_marks }}</td>
+                <td>{{ result.grade }}</td>
+
+                {% endfor %}
+
+            </tr>
+       
+
+            {% endif %}
+
+        </tbody>
+    </table>
+</div>
+
+
+
+<div class="dash-events">
+
+    <div> <h2>Upcoming Events</h2> </div>
+
+    <div class="dash-ul">
+    <ul>
+        <li><strong>STEM Competitions:</strong> <br> Science Fair - 29/October/2024, <br>Robotics Competition - 05/November/2024  </li> <br>
+        <li><strong>Cultural Celebrations:</strong> <br> 03/November/2024 - 1 Jumadal-Awwal, <br>02/December/2024 - 1 Jumadal-Akhirah </li> <br>
+        <li><strong>Annual Evennts</strong> <br>05/November/2024 - Melbourne Cup Day</li> <br>
+        <li><strong>Music and Dance</strong> <br>Senior School Dance 20/November/2024 </li> <br>
+    </ul>
+</div>
+
+</div>
+
+
+</body>
+
+</html>

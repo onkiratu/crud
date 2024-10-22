@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <title>Login</title>
+</head>
+<body>
+    
+    <nav class="sign-up"> 
+        <img src="../static/img/siriuslogo.png">
+    </nav>
+   
+    
+    <div class="signupform">
+        <h2>Login to Year 12</h2>
+        
+        <form action="" method="post">
+            {{form.hidden_tag() }} <!-- cyber security-->
+            
+            <p>{{ form.username.label}} <br>
+                {{ form.username() }}
+            </p>
+            
+            <p>{{ form.password.label}} <br>
+                {{ form.password() }}
+            </p>        
+
+            <p>{{ form.submit() }}</p> <br>
+                
+
+            </p>
+        </form>
+
+
+
+    </div>
+
+</body>
+</html>

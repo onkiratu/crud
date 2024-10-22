@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <title>Sign up</title>
+</head>
+<body>
+    
+    <nav class="sign-up"> 
+        <img src="../static/img/siriuslogo.png">
+    </nav>
+   
+    
+    <div class="signupform">
+        <h2>Sign up here</h2>
+        
+        <form action="" method="post">
+            {{form.hidden_tag() }} <!-- cyber security-->
+            <p>
+                {{ form.first_name.label}} <br>
+                {{ form.first_name() }}
+            </p>
+            <p>{{ form.last_name.label}} <br>
+                {{ form.last_name() }}
+            </p>
+            <p>{{ form.username.label}} <br>
+                {{ form.username() }}
+            </p>
+            <p> {{ form.email.label}} <br>
+                {{ form.email() }} 
+            </p>
+            <p>{{ form.password.label}} <br>
+                {{ form.password() }}
+            </p>
+            <p>{{ form.confirm_password.label}} <br>
+                {{ form.confirm_password() }}
+            </p>
+            
+
+            <p>{{ form.submit() }}</p> <br>
+                
+
+            </p>
+        </form>
+
+        {% for user in users %}
+            <ul>
+                <li>{{ user.username }}</li>
+            </ul>
+        {% endfor %}
+
+
+    </div>
+
+</body>
+</html>

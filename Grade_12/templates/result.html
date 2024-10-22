@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <title>Results</title>
+</head>
+<body>
+    <nav class="sign-up"> 
+        <a href="/dashboard"> <img src="../static/img/siriuslogo.png" ></a>
+    </nav>
+   
+    
+    <div class="signupform">
+        <h2>Your Results</h2>
+        
+        <form action="" method="post">
+            {{form.hidden_tag() }} <!-- cyber security-->
+            
+            <p>{{ form.id.label}} <br>
+                {{ form.id() }}
+            </p>
+            
+            <p>{{ form.math.label}} <br>
+                {{ form.math() }}
+            </p>
+            
+            <p>{{ form.english.label}} <br>
+                {{ form.english() }}
+            </p>        
+
+            <p>{{ form.applied_computing.label}} <br>
+                {{ form.applied_computing() }}
+            </p>        
+
+            <p>{{ form.algorithmics.label}} <br>
+                {{ form.algorithmics() }}
+            </p>        
+
+            <p>{{ form.submit() }}</p> <br>
+                
+
+            </p>
+        </form>
+
+
+
+    </div>
+
+
+
+
+</body>
+</html>
