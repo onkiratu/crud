@@ -25,16 +25,29 @@
 
     </nav>
 
-    
-    {% if current_user == super_user %} <!-- {% if current_user == super_user or current_user == super_user2 %} CAN ADD ADMIN -->
-    <div class="marksbtndiv">
-        <a href="/result"><button class="marksbtn">Enter Marks</button></a>
+
+    <!-- jinja 1 percent if current_user == super_user or current_user == super_user2 jinja 1 percent CAN ADD ADMIN -->    
+    {% if current_user == super_user %} 
+    <div>
+        <div class="marksbtndiv">
+            <a href="/result"><button class="marksbtn">Enter Marks</button></a>
+           
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Enter name to search" id="searchInput">
+            <button id="searchButton">Search</button>
+            <button id="clearButton">Clear</button>
+        </div>
+
     </div>
+
+    
 
     {% endif %}
 
     <div class="dash-content"> 
-    <table class="table" border="1">
+    <table id="dataTable" border="1">
         <thead>
             <tr>
                 <th>Student ID</th>
@@ -49,7 +62,7 @@
 
             </tr>
         </thead>
-        <tbody>
+        <tbody id="tbody">
 
             {% if current_user == super_user %}
             {% for user in users %}
@@ -115,6 +128,7 @@
 
 </div>
 
+<script src="../static/js/script.js"></script>
 
 </body>
 
