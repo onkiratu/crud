@@ -236,7 +236,12 @@ a {
     margin-right: auto;
 
  } 
- 
+
+ .marksbtndiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 }
 
 @media (max-width: 850px) {
@@ -256,18 +261,27 @@ a {
     width: 90%;
  }
 
+ .l-text h2 {
+    
+    font-size: 28px;
+ }
+
  .footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
  }
 
  .footer p {
     margin-bottom: 5px;
     margin-top: 5px;
+    margin-left: 0;
+    width: 100%;
+ }
+    
+     
  }
  
-}
 
 /* style sign up page */ 
 
@@ -432,19 +446,22 @@ a {
 
 .marksearch {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 100%;
+    
     
 }
 
 .marksbtndiv {
     display: flex;
     justify-content: right;
-    margin: 30px 30px;
-    width: 50%;
+    margin: 20px 30px;
+    width: 30%;
     padding-left: 20px;
     align-items: center;
+    
+    
 
 
 }
@@ -455,21 +472,23 @@ a {
     color: white;
     border-radius: 7px;
     padding: 5px 5px;
+    
 }
 .searchdiv {
     display: flex;
     justify-content: left;
-    width: 50%;
-    margin-bottom: 30px;
-    height: 50%;
+    width: 60%;
+    margin-bottom: 10px;
     align-items: center;
+    
+    
 }
 
 #searchButton {
         display: flex;
         justify-content: left;
         margin: 10px 10px;
-        width: 90px;
+        width: fit-content;
         padding-left: 5px;
         font-size: 18px;
         align-items: center;
@@ -479,7 +498,7 @@ a {
         display: flex;
         justify-content: left;
         margin: 10px 10px;
-        width: 90px;
+        width: fit-content;
         padding-left: 5px;
         font-size: 18px;
 }
@@ -491,6 +510,16 @@ a {
     width: 170px;
     padding-left: 5px;
     font-size: 18px;
+
+}
+
+.rbutton {
+    font-size: 16px;
+    color: #b1bbc2;
+    padding: 10px 15px;
+    background-color: #03254E;
+    border-radius: 10px;
+    margin-right: O;
 
 }
 
