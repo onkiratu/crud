@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const tbody = document.getElementById("tbody"); // Get the correct tbody element
     const rows = tbody.getElementsByTagName("tr");  // Plural function to get all rows
 
-    clearButton.addEventListener("click", () => {
+    clearButton.addEventListener("click", () => {   //ALERT
         alert("clicked");
     });
 
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function searchTable() {
         const query = searchInput.value.toLowerCase();
         for (let i = 0; i < rows.length; i++) {
-            const nameCell = rows[i].getElementsByTagName("td")[1];
+            const nameCell = rows[i].getElementsByTagName("td")[1];  //SEARCH EDITING 
             if (nameCell) {
                 const nameText = nameCell.textContent || nameCell.innerText;
                 if (nameText.toLowerCase().includes(query)) {

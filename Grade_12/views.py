@@ -59,8 +59,9 @@ def login():
 @app.route("/dashboard", methods=["GET", "POST"] )
 def dashboard():
     users = User.query.all()
-    super_user = User.query.filter_by(username="onkiratu").first()
-   
+    super_user = User.query.filter_by(username="onkiratu").first()  #add admin
+    #super_user2 = User.query.filter_by(username="bgichuhi").first()  #add admin
+
     return render_template("dashboard.html", users=users, super_user=super_user)
  
 

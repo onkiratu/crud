@@ -259,7 +259,7 @@ a {
  .footer {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
  }
 
  .footer p {
@@ -344,23 +344,6 @@ a {
     display: flex;
 }
 
-.marksbtndiv {
-    display: flex;
-    justify-content: left;
-    margin: 30px 30px;
-    width: 100%;
-    padding-left: 20px;
-       
-
-}
-
-.marksbtn {
-    background-color: #03254E;
-    font-size: 18px;
-    color: white;
-    border-radius: 7px;
-    padding: 5px 5px;
-}
 
 .profile-main {
     display: flex;
@@ -445,6 +428,70 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.marksearch {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    
+}
+
+.marksbtndiv {
+    display: flex;
+    justify-content: right;
+    margin: 30px 30px;
+    width: 50%;
+    padding-left: 20px;
+    align-items: center;
+
+
+}
+
+.marksbtn {
+    background-color: #03254E;
+    font-size: 18px;
+    color: white;
+    border-radius: 7px;
+    padding: 5px 5px;
+}
+.searchdiv {
+    display: flex;
+    justify-content: left;
+    width: 50%;
+    margin-bottom: 30px;
+    height: 50%;
+    align-items: center;
+}
+
+#searchButton {
+        display: flex;
+        justify-content: left;
+        margin: 10px 10px;
+        width: 90px;
+        padding-left: 5px;
+        font-size: 18px;
+        align-items: center;
+}
+
+#clearButton {
+        display: flex;
+        justify-content: left;
+        margin: 10px 10px;
+        width: 90px;
+        padding-left: 5px;
+        font-size: 18px;
+}
+
+#searchInput {
+    display: flex;
+    justify-content: left;
+    margin: 10px 10px;
+    width: 170px;
+    padding-left: 5px;
+    font-size: 18px;
+
 }
 
  

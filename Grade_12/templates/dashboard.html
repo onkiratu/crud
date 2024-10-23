@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="static/css/styles.css">
-    <title>Profile</title>
+    <title>Dashboard</title>
 </head>
 
 <body>
@@ -13,7 +13,9 @@
     <nav class="navbar-dashboard">
 
         <div>
-            <img src="../static/img/siriuslogo.png">
+            <!-- <a href="/index"> -->
+                <img src="../static/img/siriuslogo.png">
+            <!-- </a> -->
         </div>
 
 
@@ -28,13 +30,12 @@
 
     <!-- jinja 1 percent if current_user == super_user or current_user == super_user2 jinja 1 percent CAN ADD ADMIN -->    
     {% if current_user == super_user %} 
-    <div>
+    <div class="marksearch">
         <div class="marksbtndiv">
             <a href="/result"><button class="marksbtn">Enter Marks</button></a>
-           
         </div>
 
-        <div class="search">
+        <div class="searchdiv">
             <input type="text" placeholder="Enter name to search" id="searchInput">
             <button id="searchButton">Search</button>
             <button id="clearButton">Clear</button>

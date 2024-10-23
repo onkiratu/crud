@@ -31,28 +31,3 @@ class Result(db.Model):
     grade = db.Column(db.String)
     student_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
-#formula to calculate grade
-def calculate_grade(self):
-    
-    if self.total_marks/4 >= 70:
-        self.grade = "A"
-
-    elif self.total_marks/4 >= 59:
-        self.grade = "B"
-
-    elif self.total_marks/4 >= 49:
-        self.grade = "C"
-
-    elif self.total_marks/4 >= 39:
-        self.grade = "D"
-    
-    else:
-        self.grade = "F"
-        
- 
-
-
-
-
-
-
